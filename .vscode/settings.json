@@ -1,0 +1,38 @@
+{
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": true,
+	"editor.tabSize": 2,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "always"
+	},
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"json",
+		"jsonc",
+		"json5",
+		"markdown",
+		"yaml",
+		"yml",
+		"html",
+		"mdx",
+		"graphql",
+		"vue",
+		"mjs",
+		"cjs"
+	],
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"workbench.editor.customLabels.patterns": {
+		"**/app/**/page.tsx": "${dirname} - Page",
+		"**/app/**/index.tsx": "${dirname} - Index",
+		"**/app/**/layout.tsx": "${dirname} - Layout",
+		"**/app/**/template.tsx": "${dirname} - Template",
+		"**/components/**/index.tsx": "${dirname} - Component"
+	}
+}
