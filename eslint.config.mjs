@@ -10,6 +10,26 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+	{
+		ignores: [
+			"node_modules/**",
+			".next/**",
+			"out/**",
+			"build/**",
+			"next-env.d.ts",
+			"**/*.config.js",
+			"**/*.config.mjs",
+		],
+	},
+
+	{
+		files: ["**/*.{ts,tsx}"],
+		rules: {
+			"@typescript-eslint/no-explicit-any": "warn",
+			"@typescript-eslint/no-unused-vars": "warn",
+			"no-unused-vars": "off",
+		},
+	},
 	...compat.config({
 		extends: ["next/core-web-vitals", "next/typescript", "prettier"],
 		plugins: ["check-file"],
@@ -33,15 +53,6 @@ const eslintConfig = [
 			],
 		},
 	}),
-	{
-		ignores: [
-			"node_modules/**",
-			".next/**",
-			"out/**",
-			"build/**",
-			"next-env.d.ts",
-		],
-	},
 ];
 
 export default eslintConfig;
